@@ -8,6 +8,14 @@
         "file_name": "users.csv",
         "has_header": true
       }
+    },
+    {
+      "target_table": "UserData.Address",
+      "source_data": {
+        "data_type": "CSV",
+        "file_name": "address.csv",
+        "has_header": true
+      }
     }
   ]
 }

@@ -1,3 +1,11 @@
 service {
-	"UserData.User" as "Users";
+
+	"UserData.User" as "Users" navigates ("UserAddress" as "MyAddress");
+	"UserData.Address" as "Addresses" navigates ("UserAddress" as "MyUser");
+	"UserData.UserDetail" as "UserDetails" key ("userId");
+	
+	association "UserAddress" with referential constraint
+		principal "Users"("address.id") multiplicity "1"
+		dependent "Addresses"("id") multiplicity "0..1";
+		
 }

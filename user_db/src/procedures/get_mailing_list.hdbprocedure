@@ -7,5 +7,5 @@ BEGIN
    /*************************************
        Write your procedure logic 
    *************************************/
-	SELECT "Email" FROM "UserData.User";
+	SELECT "email" FROM "UserData.User";
 END
